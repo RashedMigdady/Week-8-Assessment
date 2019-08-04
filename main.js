@@ -1,4 +1,4 @@
-console.log('GOOD LUCK 👩‍💻 👨‍💻')
+console.log('GOOD LUCK 👩‍💻 👨‍💻') 
 // Please focus
 
 /* Q1:
@@ -37,15 +37,34 @@ var object2={
 
 //1) WRITE YOUR CODE UNDER THIS LINE         
 
+sum = (a , b) => {a + b}
+  
+
+
 //2) WRITE YOUR CODE UNDER THIS LINE         
+ consoleReturn = (x,y)=>{
+  console.log(x)
+  return y
+}
 
 //3) WRITE YOUR CODE UNDER THIS LINE         
-
+var name="Alex"
+var age=25
+var result="My name is: " $(name) "and my age is: "  $(age)
 //4) WRITE YOUR CODE UNDER THIS LINE         
-
+var food="Fried Chicken"
+var color="Blue"
+var object={
+  food,
+  color
+}
 //5) WRITE YOUR CODE UNDER THIS LINE         
 
-
+var object2={
+  multi(a,b){
+    return a * b
+  }
+};
 
 
 
@@ -65,15 +84,22 @@ Example:
 computer1
 Output =>
 {
-  OS:'Windows',
-  RAM:16,
-  CPU:'I7',
-  doubleRAM:f(){}
+  
 }
 */
 
 // WRITE YOUR CODE UNDER THIS LINE
-
+class computer {
+  constructor(OS , RAM ,CPU)  {
+    this.OS='Windows',
+  this.RAM=16,
+  this.CPU='I7',
+  doubleRAM(){
+    return computer.RAM*2 
+  }
+  };
+  
+};
 
 
 
@@ -94,13 +120,15 @@ export default class App extends Component {
     todos: ['eat', 'eat eat', 'eact again']
   };
   changeTitle() {
-    state.title = 'AGGREGOR ZOLDYCK'
+    this.state.title = 'AGGREGOR ZOLDYCK'
   }
   render() {
     return (
+    <div>
       <h1>App Component => state.title</h1>
       <button onClick={this.changeTitle}>Change Title</button>
       <Tasks tasks={this.todos} changeTitleFromChild={this.changeTitle} />
+    </div>
     );
   }
 }
@@ -121,7 +149,7 @@ class Tasks extends Component {
       <div>
         <h1>Tasks Component => state.day</h1>
         <button onClick={this.changeDay}>Change Tasks State</button>
-        <button onClick={changeTitle}>Change App State</button>
+        <button onClick={this.changeTitle}>Change App State</button>
       </div>
     );
   }
